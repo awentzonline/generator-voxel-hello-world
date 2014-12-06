@@ -1,4 +1,4 @@
-'use strict'; // Sorry, I know you guys like semicolons.
+'use strict'; // Sorry, I know you guys don't like semicolons.
 
 var createGame = require('voxel-engine');
 var highlight = require('voxel-highlight');
