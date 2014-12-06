@@ -7,6 +7,7 @@
 ## Features
 
 * https://github.com/maxogden/voxel-hello-world
+* https://github.com/shama/voxel-sky
 * Browserified with grunt-watchify
 * CSS Autoprefixing
 * Built-in preview server with LiveReload

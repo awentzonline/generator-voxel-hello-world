@@ -10,19 +10,18 @@ var walk = require('voxel-walk');
 var sky = require('voxel-sky');
 
 module.exports = function(opts, setup) {
-  console.log('here we go');
   setup = setup || defaultSetup
   var defaults = {
     generate: function (x, y, z) {
       if (y == 0) {
-        return 1;
+        return 2;
       } else {
         return 0;
       }
     },
     chunkDistance: 2,
-    materials: ['#fff', '#000'],
-    materialFlatColor: true,
+    materials: ['obsidian', ['grass', 'dirt', 'grass_dirt'], 'grass', 'plank'],
+    texturePath: 'images/textures/',
     worldOrigin: [0, 0, 0],
     controls: { discreteFire: true },
     lightsDisabled: true,
@@ -42,21 +41,23 @@ module.exports = function(opts, setup) {
   // create the player from a minecraft skin file and tell the
   // game to use it as the main player
   var avatar = createPlayer(opts.playerSkin || 'images/player.png');
-  avatar.possess();
   avatar.yaw.position.set(2, 14, 4);
-
+  avatar.possess();
+  
   setup(game, avatar);
   
   return game;
 }
 
 function defaultSetup(game, avatar) {
-  
   var makeFly = fly(game);
   var target = game.controls.target();
   game.flyer = makeFly(target);
-  var createSky = sky(game);
-  var theSky = createSky();
+  var createSky = sky({
+    game: game,
+    speed: 1.5
+  });
+  var tickSky = createSky();
   // var createWebview = require('voxel-webview');
   // var webview = createWebview(game, {
   //   url: "http://www.clickhole.com/"
@@ -75,7 +76,7 @@ function defaultSetup(game, avatar) {
   })
 
   // block interaction stuff, uses highlight data
-  var currentMaterial = 1;
+  var currentMaterial = 2;
 
   game.on('fire', function (target, state) {
     var position = blockPosPlace;
@@ -88,7 +89,8 @@ function defaultSetup(game, avatar) {
     }
   })
 
-  game.on('tick', function() {
+  game.on('tick', function (dt) {
+    tickSky(dt);
     walk.render(target.playerSkin);
     var vx = Math.abs(target.velocity.x);
     var vz = Math.abs(target.velocity.z);
@@ -97,7 +99,6 @@ function defaultSetup(game, avatar) {
     } else {
       walk.startWalking();
     }
-    theSky();
   })
 
 }
