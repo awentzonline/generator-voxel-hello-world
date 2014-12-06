@@ -1,11 +1,12 @@
-# Web app generator [![Build Status](https://secure.travis-ci.org/awentzonline/generator-webapp-watchify.svg?branch=master)](http://travis-ci.org/awentzonline/generator-webapp-watchify)
+# Web app generator [![Build Status](https://secure.travis-ci.org/awentzonline/generator-voxel-hello-world.svg?branch=master)](http://travis-ci.org/awentzonline/generator-voxel-hello-world)
 
-[Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app including browserify via grunt-watchify.
+[Yeoman](http://yeoman.io) generator that scaffolds out a voxeljs app via grunt-watchify.
 
 ![](http://i.imgur.com/uKTT2Hj.png)
 
 ## Features
 
+* https://github.com/maxogden/voxel-hello-world
 * Browserified with grunt-watchify
 * CSS Autoprefixing
 * Built-in preview server with LiveReload
@@ -17,12 +18,12 @@
 * Bootstrap for Sass (Optional)
 * Leaner Modernizr builds (Optional)
 
-For more information on what `generator-webapp-watchify` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-webapp-watchify/blob/master/app/templates/_package.json) used in our `package.json`.
+For more information on what `generator-voxel-hello-world` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-voxel-hello-world/blob/master/app/templates/_package.json) used in our `package.json`.
 
 
 ## Getting Started
 
-- Install: `npm install -g generator-webapp-watchify`
+- Install: `npm install -g generator-voxel-hello-world`
 - Run: `yo webapp`
 - Run `grunt` for building and `grunt serve` for preview[\*](#grunt-serve-note). `--allow-remote` option for remote access.
 

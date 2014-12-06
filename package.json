@@ -1,10 +1,10 @@
 {
-  "name": "generator-webapp-watchify",
+  "name": "generator-voxel-hello-world",
   "version": "0.5.1",
-  "description": "Scaffold out a front-end web app",
+  "description": "Scaffold out a voxel.js app",
   "license": "BSD",
-  "repository": "awentzonline/generator-webapp-watchify",
-  "author": "The Yeoman Team and Adam Wentz",
+  "repository": "awentzonline/generator-voxel-hello-world",
+  "author": "The Yeoman Team, Adam Wentz, maxogden",
   "main": "app/index.js",
   "engines": {
     "node": ">=0.10.0",

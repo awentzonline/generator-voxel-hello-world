@@ -66,6 +66,24 @@ body {
   }
 }
 
+#voxel-container {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#crosshair {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -16px;
+  width: 32px;
+  height: 32px;
+}
+
+#stats { bottom: 0px; right: 0px; }
+.bar-tab { right: 33% !important; left: 33% !important; }
+.errorMessage { text-align: center; width: 200px; margin: 20px auto; }
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
