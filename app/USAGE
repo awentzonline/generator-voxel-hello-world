@@ -1,11 +1,11 @@
 Description:
-    Creates a new basic front-end web application.
+    Creates a new basic front-end web application including browserify.
 
 Options:
     Bootstrap: Include Bootstrap for Sass
 
 Example:
-    yo webapp [--coffee]
+    yo webapp-watchify [--coffee]
 
     This will create:
         Gruntfile.js: Configuration for the task runner.

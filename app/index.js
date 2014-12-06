@@ -169,8 +169,8 @@ module.exports = yeoman.generators.Base.extend({
     this.indexFile = this.appendFiles({
       html: this.indexFile,
       fileType: 'js',
-      optimizedPath: 'scripts/main.js',
-      sourceFileList: ['scripts/main.js'],
+      optimizedPath: 'scripts/bundle.js',
+      sourceFileList: ['scripts/bundle.js'],
       searchPath: ['app', '.tmp']
     });
   },
@@ -187,9 +187,6 @@ module.exports = yeoman.generators.Base.extend({
         'app/scripts/main.coffee',
         'console.log "\'Allo from CoffeeScript!"'
       );
-    }
-    else {
-      this.write('app/scripts/main.js', 'console.log(\'\\\'Allo \\\'Allo!\');');
     }
   },
 

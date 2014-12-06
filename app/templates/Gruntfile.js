@@ -438,9 +438,20 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    watchify: {
+      options: {
+        debug: true
+      },
+      dist: {
+        src: './app/scripts/*.js',
+        dest: './.tmp/scripts/bundle.js'
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-watchify');
 
   grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function (target) {
     if (grunt.option('allow-remote')) {
@@ -452,6 +463,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'watchify',
       'wiredep',
       'concurrent:server',
       'autoprefixer',
@@ -483,6 +495,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'watchify',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
@@ -499,6 +512,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
+    'watchify',
     'test',
     'build'
   ]);

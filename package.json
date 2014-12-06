@@ -1,10 +1,10 @@
 {
-  "name": "generator-webapp",
+  "name": "generator-webapp-watchify",
   "version": "0.5.1",
   "description": "Scaffold out a front-end web app",
   "license": "BSD",
-  "repository": "yeoman/generator-webapp",
-  "author": "The Yeoman Team",
+  "repository": "awentzonline/generator-webapp-watchify",
+  "author": "The Yeoman Team and Adam Wentz",
   "main": "app/index.js",
   "engines": {
     "node": ">=0.10.0",
@@ -24,7 +24,9 @@
     "h5bp",
     "modernizr",
     "jquery",
-    "grunt"
+    "grunt",
+    "watchify",
+    "browserify"
   ],
   "dependencies": {
     "chalk": "^0.5.1",

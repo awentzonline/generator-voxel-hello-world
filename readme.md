@@ -1,11 +1,12 @@
-# Web app generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-webapp.svg?branch=master)](http://travis-ci.org/yeoman/generator-webapp)
+# Web app generator [![Build Status](https://secure.travis-ci.org/awentzonline/generator-webapp-watchify.svg?branch=master)](http://travis-ci.org/awentzonline/generator-webapp-watchify)
 
-[Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app.
+[Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app including browserify via grunt-watchify.
 
 ![](http://i.imgur.com/uKTT2Hj.png)
 
 ## Features
 
+* Browserified with grunt-watchify
 * CSS Autoprefixing
 * Built-in preview server with LiveReload
 * Automagically compile CoffeeScript & Sass
@@ -16,12 +17,12 @@
 * Bootstrap for Sass (Optional)
 * Leaner Modernizr builds (Optional)
 
-For more information on what `generator-webapp` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-webapp/blob/master/app/templates/_package.json) used in our `package.json`.
+For more information on what `generator-webapp-watchify` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-webapp-watchify/blob/master/app/templates/_package.json) used in our `package.json`.
 
 
 ## Getting Started
 
-- Install: `npm install -g generator-webapp`
+- Install: `npm install -g generator-webapp-watchify`
 - Run: `yo webapp`
 - Run `grunt` for building and `grunt serve` for preview[\*](#grunt-serve-note). `--allow-remote` option for remote access.
 
